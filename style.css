@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Updated Palette: Sky Blue & Deep Oceans */
+  --qs-ink: #0d1b2a;
+  --qs-ink-strong: #040c16;
+  --qs-ink-muted: #415a77;
+  --qs-blue-1: #8ecae6;
+  --qs-blue-2: #1d9fbf;
+  --qs-accent: #0c98bf;
+  --qs-sky-light: #e0f2fe;
+  --qs-sky-pale: #f0f9ff;
+  --qs-sunrise: #caf0f8;
+  --qs-shadow: rgba(0, 71, 119, 0.12);
+  --qs-card: #ffffff;
+  --qs-border: rgba(0, 119, 182, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--qs-ink);
+  /* New Sky Gradient */
+  background: radial-gradient(
+      1200px 500px at 15% -10%,
+      rgba(202, 240, 248, 0.85),
+      rgba(202, 240, 248, 0) 60%
+    ),
+    radial-gradient(
+      900px 700px at 100% 0%,
+      rgba(172, 240, 252, 0.55),
+      rgba(144, 224, 239, 0) 60%
+    ),
+    linear-gradient(180deg, #f8fdff 0%, #e0f2fe 45%, #cae9ff 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1180px;
+}
+
+.qs-hero {
+  /* Blue Glass Effect */
+  background: linear-gradient(
+    120deg,
+    rgba(131, 242, 254, 0.7) 0%,
+    rgba(65, 224, 252, 0.6) 48%,
+    rgba(10, 234, 255, 0.75) 100%
+  );
+  border: 1px solid rgba(0, 119, 182, 0.2);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 28px 60px rgba(0, 71, 119, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.qs-hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  top: -210px;
+  right: -160px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(0, 180, 216, 0.2),
+    rgba(0, 180, 216, 0)
+  );
+  pointer-events: none;
+}
+
+.qs-title {
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: clamp(2.4rem, 3.2vw, 3.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--qs-ink-strong);
+}
+
+.gradient-text {
+  /* Blue to Teal Gradient */
+  background: linear-gradient(110deg, #0077b6 10%, #00b4d8 50%, #48cae4 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.qs-subtitle {
+  font-size: 1.05rem;
+  color: var(--qs-ink-muted);
+  max-width: 520px;
+}
+
+.qs-stat {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 119, 182, 0.15);
+  border-radius: 16px;
+  padding: 12px 16px;
+  min-width: 140px;
+  box-shadow: 0 10px 24px rgba(0, 71, 119, 0.08);
+}
+
+.qs-stat .label {
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--qs-ink-muted);
+}
+
+.qs-stat .value {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--qs-ink-strong);
+}
+
+.qs-stat .value-small {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--qs-ink);
+}
+
+.qs-panel {
+  background: var(--qs-card);
+  border: 1px solid var(--qs-border);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px var(--qs-shadow);
+}
+
+.qs-online-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #90e0ef, #00b4d8);
+  box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.2);
+}
+
+.card {
+  background: var(--qs-card);
+  border: 1px solid var(--qs-border);
+  box-shadow: 0 18px 32px rgba(0, 71, 119, 0.08);
+}
+
+.card h2,
+.card .h4 {
+  font-family: "Fraunces", "Times New Roman", serif;
+  color: var(--qs-ink-strong);
+}
+
+.text-secondary {
+  color: var(--qs-ink-muted) !important;
+}
+
+.text-muted {
+  color: rgba(65, 90, 119, 0.65) !important;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--qs-ink-strong);
+}
+
+.form-select,
+.form-control,
+textarea.form-control {
+  border-radius: 14px;
+  border: 1px solid rgba(0, 119, 182, 0.2);
+  background: #fdfeff;
+  color: var(--qs-ink);
+  padding: 12px 14px;
+  box-shadow: inset 0 0 0 1px rgba(0, 180, 216, 0.05);
+}
+
+.form-select:focus,
+.form-control:focus,
+textarea.form-control:focus {
+  border-color: var(--qs-blue-2);
+  box-shadow: 0 0 0 0.2rem rgba(0, 180, 216, 0.15);
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 12px 26px rgba(0, 119, 182, 0.3);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #48cae4, #0096c7);
+  color: #ffffff;
+}
+
+.btn-outline-primary {
+  border-color: rgba(0, 119, 182, 0.3);
+  color: var(--qs-blue-2);
+}
+
+.btn-outline-primary:hover {
+  background: rgba(0, 180, 216, 0.08);
+  border-color: var(--qs-blue-2);
+  color: var(--qs-blue-2);
+}
+
+.btn-outline-danger {
+  border-color: rgba(230, 57, 70, 0.4);
+  color: #e63946;
+}
+
+.btn-outline-danger:hover {
+  background: rgba(230, 57, 70, 0.08);
+  color: #e63946;
+}
+
+#slotsGrid .col-12.text-center.text-secondary {
+  background: rgba(224, 242, 254, 0.6);
+  border: 1px dashed rgba(0, 119, 182, 0.3);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+#bookingsList .text-secondary.small {
+  background: rgba(224, 242, 254, 0.5);
+  border: 1px dashed rgba(0, 119, 182, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.modal-content {
+  background: #ffffff;
+  border: 1px solid rgba(0, 119, 182, 0.2);
+  box-shadow: 0 24px 60px rgba(0, 71, 119, 0.15);
+}
+
+.modal-header .modal-title {
+  font-family: "Fraunces", "Times New Roman", serif;
+  color: var(--qs-ink-strong);
+}
+
+.modal-footer .btn {
+  min-width: 120px;
+}
+@media (max-width: 991px) {
+  .qs-hero {
+    padding: 24px;
+  }
+
+  .qs-title {
+    font-size: clamp(2.1rem, 7vw, 3rem);
+  }
+
+  .qs-stat {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .qs-hero {
+    padding: 20px;
+  }
+
+  .qs-panel,
+  .card {
+    border-radius: 20px;
+  }
+
+  .btn-primary.btn-lg {
+    width: 100%;
+  }
+}
